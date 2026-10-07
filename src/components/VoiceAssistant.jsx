@@ -172,7 +172,21 @@ export default function VoiceAssistant() {
           disabled={micDisabled}
           aria-label={isListening ? 'Parar de ouvir' : 'Falar'}
         >
-          🎤
+          <svg viewBox="0 0 24 24" className="mic-button__icon" aria-hidden="true">
+            <path
+              d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+            />
+            <path
+              d="M6 11v1a6 6 0 0 0 12 0v-1M12 19v2.5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+            />
+          </svg>
         </button>
       )}
 

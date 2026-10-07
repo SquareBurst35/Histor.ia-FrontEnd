@@ -8,6 +8,10 @@ artificial nos jogos. Consome a API do
 
 - React 19 + Vite
 - Sem bibliotecas de UI ou roteamento — CSS simples, navegação por estado
+- Voz via **Web Speech API** do navegador (`SpeechRecognition` +
+  `SpeechSynthesis`) — nada de servidor, nada de chave de API. Funciona em
+  Chrome/Edge; suporte inconsistente em Firefox e Safari. O backend não tem
+  (e não precisa ter) nada de áudio — é tudo feito no navegador.
 
 ## Rodando em dev
 
@@ -38,7 +42,7 @@ src/
 │   ├── EraFilter.jsx
 │   ├── TimelineList.jsx
 │   ├── MarcoDetail.jsx
-│   └── Chat.jsx         # chat com streaming via SSE (POST /api/chat)
+│   └── Chat.jsx         # chat com streaming via SSE + voz (STT/TTS do navegador)
 ├── App.jsx
 └── main.jsx
 ```

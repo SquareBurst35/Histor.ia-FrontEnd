@@ -251,3 +251,44 @@
   opacity: 0.5;
   cursor: default;
 }
+
+.chat__mic {
+  border: none;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  font-size: 18px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.chat__mic--active {
+  background: var(--accent-bg);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.chat__voice-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text);
+  padding: 10px 2px 0;
+  cursor: pointer;
+}
+
+.chat__voice-unsupported {
+  font-size: 12px;
+  color: var(--text);
+  font-style: italic;
+  padding-top: 10px;
+}

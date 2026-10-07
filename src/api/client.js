@@ -27,26 +27,6 @@ export function getHealth() {
   return request('/health');
 }
 
-export function getEras() {
-  return request('/eras');
-}
-
-export function getTimeline(era) {
-  const query = era ? `?era=${encodeURIComponent(era)}` : '';
-  return request(`/timeline${query}`);
-}
-
-export function getMarco(id) {
-  return request(`/timeline/${encodeURIComponent(id)}`);
-}
-
-export function chatSync(message, history = []) {
-  return request('/chat/sync', {
-    method: 'POST',
-    body: JSON.stringify({ message, history }),
-  });
-}
-
 function parseSseEvent(raw) {
   let event = null;
   let data = '';
@@ -103,5 +83,3 @@ export async function chatStream(message, history, { onToken, onSources, onDone,
     }
   }
 }
-
-export { ApiError };
